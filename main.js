@@ -1,16 +1,19 @@
-const text = document.getElementById("text");
 const btn = document.getElementById("btn");
+const text = document.getElementById("text");
+
 let i;
 btn.addEventListener("click", (eo) => {
-  const textValue = text.value;
-  const regVowels = /[aeuoi]/g;
-  if (textValue == "") {
+  const regVowels = /[aeiou]/g;
+  const lowerCase = text.value.toLowerCase();
+  console.log(lowerCase);
+  if (lowerCase == "") {
     alert("write somthing");
   }
-  if (textValue.match(regVowels) && textValue != "") {
-    alert(`There is ${textValue.match(regVowels).length} Vowle(s)`);
+  if (lowerCase.match(regVowels) && lowerCase != "") {
+    alert(`There is ${lowerCase.match(regVowels).length} Vowle(s)`);
   }
-  if (!textValue.match(regVowels) && textValue != "") {
-    alert("0 vowels");
+  if (!lowerCase.match(regVowels) && lowerCase != "") {
+    alert("nothing");
   }
+  text.value == "";
 });
