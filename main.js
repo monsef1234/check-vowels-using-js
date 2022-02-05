@@ -1,7 +1,5 @@
 const btn = document.getElementById("btn");
 const text = document.getElementById("text");
-
-let i;
 btn.addEventListener("click", (eo) => {
   const regVowels = /[aeiou]/g;
   const lowerCase = text.value.toLowerCase();
@@ -15,5 +13,4 @@ btn.addEventListener("click", (eo) => {
   if (!lowerCase.match(regVowels) && lowerCase != "") {
     alert("nothing");
   }
-  text.value == "";
 });
