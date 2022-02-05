@@ -1,1 +1,1 @@
-# checkvowelsusingjs
+# check vowels using js
